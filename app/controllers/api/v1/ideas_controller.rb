@@ -14,8 +14,6 @@ class Api::V1::IdeasController < ApplicationController
 
     if @idea.save
       respond_with :api, :v1, @idea
-    else
-      # do something
     end
   end
 

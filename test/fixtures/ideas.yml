@@ -1,11 +1,9 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+turing_school:
+  title: Turing School
+  body: A school for developers
+  quality: 3
 
-one:
-  title: MyString
-  body: MyString
-  quality: 1
-
-two:
-  title: MyString
-  body: MyString
-  quality: 1
+rubyonrails:
+  title: Ruby on Rails
+  body: A web framework
+  quality: 2

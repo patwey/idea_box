@@ -27,7 +27,7 @@ function changeQualityBtns(quality) {
 
   } else if (quality == "plausible") {
     return thumbsUpBtn("genius", true) + thumbsDownBtn("swill", true)
-    
+
   } else {
     return thumbsUpBtn("", false) + thumbsDownBtn("plausible", true)
   }
@@ -35,11 +35,11 @@ function changeQualityBtns(quality) {
 
 function thumbsUpBtn(dataQuality, active) {
   if (active) {
-    return "<button data-quality='"+ dataQuality +"' class='thumbs-up pull-right btn btn-default btn-xs'>" +
+    return "<button data-quality='"+ dataQuality +"' class='change-quality pull-right btn btn-default btn-xs'>" +
            "<span class='glyphicon glyphicon-thumbs-up'></span>" +
            "</button>"
   } else {
-    return "<button class='thumbs-up pull-right btn btn-default btn-xs' disabled>" +
+    return "<button class='change-quality pull-right btn btn-default btn-xs' disabled>" +
            "<span class='glyphicon glyphicon-thumbs-up'></span>" +
            "</button>"
   }
@@ -47,11 +47,11 @@ function thumbsUpBtn(dataQuality, active) {
 
 function thumbsDownBtn(dataQuality, active) {
   if (active) {
-    return "<button data-quality='"+ dataQuality +"' class='thumbs-down pull-right btn btn-default btn-xs'>" +
+    return "<button data-quality='"+ dataQuality +"' class='change-quality pull-right btn btn-default btn-xs'>" +
            "<span class='glyphicon glyphicon-thumbs-down'></span>" +
            "</button>"
   } else {
-    return "<button class='thumbs-down pull-right btn btn-default btn-xs' disabled>" +
+    return "<button class='change-quality pull-right btn btn-default btn-xs' disabled>" +
            "<span class='glyphicon glyphicon-thumbs-down'></span>" +
            "</button>"
   }

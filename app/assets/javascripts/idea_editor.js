@@ -1,14 +1,9 @@
 function editableIdeas() {
   $(".edit-idea").on("click", function() {
-    var $idea = $(this).closest(".idea")
+    var $idea = $(this).closest(".idea");
 
-    // pre-fill modal
     fillEditModal($idea);
-
-    // unbind previous click events to 'save'
     unbindSaveEditBtn();
-
-    // bind click event to 'save'
     bindSaveEditBtn($idea);
   });
 }

@@ -6,5 +6,6 @@ function fetchIdeas() {
   })
   .always(function() {
     removableIdeas();
+    editableIdeas();
   });
 }

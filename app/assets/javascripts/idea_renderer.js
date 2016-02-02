@@ -3,7 +3,7 @@ function renderIdea(idea) {
 }
 
 function ideaTemplate(idea) {
-  return "<div data-id='"+ idea.id +"' class='idea panel panel-default'>" +
+  return "<div data-id='"+ idea.id +"' data-title='"+ idea.title +"' data-body='"+ idea.body +"' class='idea panel panel-default'>" +
          "<div class='panel-heading'>" +
          "<span class='panel-title'>" + idea.title + "</span>" +
          "<button class='remove-idea pull-right btn btn-default btn-xs'>" +

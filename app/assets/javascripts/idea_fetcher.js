@@ -3,5 +3,8 @@ function fetchIdeas() {
     $.each(ideas, function(idx, idea) {
       renderIdea(idea);
     });
+  })
+  .always(function() {
+    removableIdeas();
   });
 }

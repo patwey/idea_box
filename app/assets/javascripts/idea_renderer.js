@@ -3,9 +3,12 @@ function renderIdea(idea) {
 }
 
 function ideaTemplate(idea) {
-  return "<div class='panel panel-default'>" +
+  return "<div data-id='"+ idea.id +"' class='idea panel panel-default'>" +
          "<div class='panel-heading'>" +
-         "<h4 class='panel-title'>" + idea.title + "</h4>" +
+         "<span class='panel-title'>" + idea.title + "</span>" +
+         "<button class='remove-idea pull-right btn btn-default btn-xs'>" +
+         "<span class='glyphicon glyphicon-remove'></span>" +
+         "</button>" +
          "</div>" +
          "<div class='panel-body'>" +
          "<p>" + idea.body + "</p>" +

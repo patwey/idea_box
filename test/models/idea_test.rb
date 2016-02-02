@@ -29,16 +29,15 @@ class IdeaTest < ActiveSupport::TestCase
     refute idea.valid?
   end
 
-  test "it is invalid without a quality" do
+  test "it has a default quality of 'swill'" do
     idea = valid_idea
-    idea.quality = nil
+    idea.save
 
-    refute idea.valid?
+    assert_equal "swill", Idea.last.quality
   end
 
   def valid_idea
     Idea.new(title:   "Prestige Worldwide",
-             body:    "Worldwide...wide...wide",
-             quality: 2)
+             body:    "Worldwide...wide...wide")
   end
 end

@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.2.4'
+gem 'sprockets-rails', '2.3.3'
 gem 'pg'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
@@ -16,6 +17,11 @@ group :development, :test do
   gem 'pry'
   gem 'capybara'
   gem 'launchy'
+  gem 'teaspoon'
+  gem 'teaspoon-mocha'
+  gem 'phantomjs'
+  gem 'magic_lamp'
+  gem 'database_cleaner'
 end
 
 group :development do

@@ -16,6 +16,43 @@ function ideaTemplate(idea) {
          "<div class='panel-body'>" +
          "<p>" + idea.body + "</p>" +
          "<span class='label label-default'>" + idea.quality + "</span>" +
+         changeQualityBtns(idea.quality) +
          "</div>" +
          "</div>"
+}
+
+function changeQualityBtns(quality) {
+  if (quality == "swill") {
+    return thumbsUpBtn("plausible", true) + thumbsDownBtn("", false)
+
+  } else if (quality == "plausible") {
+    return thumbsUpBtn("genius", true) + thumbsDownBtn("swill", true)
+    
+  } else {
+    return thumbsUpBtn("", false) + thumbsDownBtn("plausible", true)
+  }
+}
+
+function thumbsUpBtn(dataQuality, active) {
+  if (active) {
+    return "<button data-quality='"+ dataQuality +"' class='thumbs-up pull-right btn btn-default btn-xs'>" +
+           "<span class='glyphicon glyphicon-thumbs-up'></span>" +
+           "</button>"
+  } else {
+    return "<button class='thumbs-up pull-right btn btn-default btn-xs' disabled>" +
+           "<span class='glyphicon glyphicon-thumbs-up'></span>" +
+           "</button>"
+  }
+}
+
+function thumbsDownBtn(dataQuality, active) {
+  if (active) {
+    return "<button data-quality='"+ dataQuality +"' class='thumbs-down pull-right btn btn-default btn-xs'>" +
+           "<span class='glyphicon glyphicon-thumbs-down'></span>" +
+           "</button>"
+  } else {
+    return "<button class='thumbs-down pull-right btn btn-default btn-xs' disabled>" +
+           "<span class='glyphicon glyphicon-thumbs-down'></span>" +
+           "</button>"
+  }
 }

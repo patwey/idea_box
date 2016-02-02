@@ -17,7 +17,7 @@ function updatableQualities() {
 }
 
 function getUpdateQualtyParams(newQuality) {
-  var params = {idea: {}};
+  var params = { idea: {} };
 
   params.idea.quality = newQuality;
 

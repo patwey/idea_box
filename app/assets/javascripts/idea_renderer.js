@@ -9,6 +9,9 @@ function ideaTemplate(idea) {
          "<button class='remove-idea pull-right btn btn-default btn-xs'>" +
          "<span class='glyphicon glyphicon-remove'></span>" +
          "</button>" +
+         "<button data-toggle='modal' data-target='#edit-idea' class='edit-idea pull-right btn btn-default btn-xs'>" +
+         "<span class='glyphicon glyphicon-pencil'></span>" +
+         "</button>" +
          "</div>" +
          "<div class='panel-body'>" +
          "<p>" + idea.body + "</p>" +

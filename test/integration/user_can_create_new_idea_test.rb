@@ -11,6 +11,15 @@ class UserCanCreateNewIdeaTest < ActionDispatch::IntegrationTest
       click_button "Save"
     end
 
-    
+    find ".idea", match: :first
+
+    within ".idea", match: :first do
+      assert page.has_css? ".panel-title", "My Idea"
+
+      within ".panel-body" do
+        assert page.has_content? "My idea's body"
+        assert page.has_css? ".label", "swill"
+      end
+    end
   end
 end

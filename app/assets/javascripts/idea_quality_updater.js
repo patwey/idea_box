@@ -9,9 +9,8 @@ function updatableQualities() {
       url:  "/api/v1/ideas/" + $idea.attr("data-id"),
       data: params,
       success: function() {
-        // instead update the single idea (don't fetch them all)
-        clearIdeas();
-        fetchIdeas();
+        updateIdeaQualityLabel($idea, newQuality);
+        updateChangeQualityBtns($idea, newQuality);
       }
     });
   });
@@ -23,4 +22,13 @@ function getUpdateQualtyParams(newQuality) {
   params.idea.quality = newQuality;
 
   return params
+}
+
+function updateIdeaQualityLabel(idea, newQuality) {
+  $(idea).find('.label').html(newQuality);
+}
+
+function updateChangeQualityBtns(idea, newQuality) {
+  $(idea).find('.change-quality').remove();
+  $(idea).find('.panel-body').append(changeQualityBtns(newQuality));
 }

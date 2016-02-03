@@ -1,5 +1,5 @@
 function removableIdeas() {
-  $(".remove-idea").on("click", function() {
+  $("#ideas").delegate(".remove-idea", "click", function() {
     var $idea = $(this).closest(".idea");
     removeIdea($idea);
   });

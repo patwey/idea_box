@@ -1,5 +1,6 @@
 function createIdea() {
-  $("#save-idea").on("click", function() {
+  $("#save-idea").on("click", function(e) {
+    e.preventDefault();
     var ideaParams = getIdeaParams();
 
     $.post("/api/v1/ideas", ideaParams, function(newIdea) {
@@ -11,7 +12,7 @@ function createIdea() {
 
 function getIdeaParams() {
   var params = {idea: {}};
-  
+
   params.idea.title = $("#new-idea-title").val();
   params.idea.body  = $("#new-idea-body").val();
 

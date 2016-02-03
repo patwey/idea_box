@@ -1,5 +1,5 @@
 function updatableQualities() {
-  $(".change-quality").on("click", function() {
+  $("#ideas").delegate(".change-quality", "click", function() {
     var newQuality = $(this).attr("data-quality");
     var $idea      = $(this).closest(".idea");
     var params     = getUpdateQualtyParams(newQuality);
@@ -9,6 +9,7 @@ function updatableQualities() {
       url:  "/api/v1/ideas/" + $idea.attr("data-id"),
       data: params,
       success: function() {
+        // instead update the single idea (don't fetch them all)
         clearIdeas();
         fetchIdeas();
       }

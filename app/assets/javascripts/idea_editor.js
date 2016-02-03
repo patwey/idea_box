@@ -1,5 +1,5 @@
 function editableIdeas() {
-  $(".edit-idea").on("click", function() {
+  $("#ideas").delegate(".edit-idea", "click", function() {
     var $idea = $(this).closest(".idea");
 
     fillEditModal($idea);

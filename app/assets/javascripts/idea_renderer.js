@@ -14,7 +14,7 @@ function ideaTemplate(idea) {
          "</button>" +
          "</div>" +
          "<div class='panel-body'>" +
-         "<p>" + truncateBody(idea.body) + "</p>" +
+         "<p>" + getBody(idea.body) + "</p>" +
          "<span class='label label-default'>" + idea.quality + "</span>" +
          changeQualityBtns(idea.quality) +
          "</div>" +

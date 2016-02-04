@@ -17,6 +17,8 @@ group :development, :test do
   gem 'pry'
   gem 'capybara'
   gem 'launchy'
+  gem 'selenium-webdriver'
+  
   gem 'teaspoon'
   gem 'teaspoon-mocha'
   gem 'phantomjs'

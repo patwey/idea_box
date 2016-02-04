@@ -10,4 +10,12 @@ end
 
 class ActionDispatch::IntegrationTest
   include Capybara::DSL
+
+  def setup
+    Capybara.current_driver = :selenium
+  end
+
+  def teardown
+    Capybara.current_driver = Capybara.default_driver
+  end
 end

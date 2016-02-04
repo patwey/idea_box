@@ -2,9 +2,9 @@ require 'test_helper'
 
 class UserCanDeleteAnIdeaTest < ActionDispatch::IntegrationTest
   test "user can delete an idea" do
-    create_idea("Deleteable Idea", "Body")
-
     visit "/"
+    
+    create_idea("Deleteable Idea", "Body")
 
     find ".idea[data-title='Deleteable Idea']"
 

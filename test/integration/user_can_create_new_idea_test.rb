@@ -21,5 +21,7 @@ class UserCanCreateNewIdeaTest < ActionDispatch::IntegrationTest
         assert page.has_css? ".label", "swill"
       end
     end
+
+    delete_idea("My Idea")
   end
 end

@@ -84,7 +84,7 @@ class Api::V1::IdeasControllerTest < ActionController::TestCase
   end
 
   def create_idea
-    Idea.create!(title:   "My Idea",
+    Idea.create!(title:   "New Idea",
                  body:    "The body of my idea",
                  quality: 2)
   end

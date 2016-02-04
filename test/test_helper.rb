@@ -30,4 +30,11 @@ class ActionDispatch::IntegrationTest
       click_button "Save"
     end
   end
+
+  def delete_idea(title)
+    within ".idea[data-title='#{title}']" do
+      find ".remove-idea"
+      click_button "remove-idea"
+    end
+  end
 end

@@ -39,7 +39,7 @@ function thumbsUpBtn(dataQuality, active) {
            "<span class='glyphicon glyphicon-thumbs-up'></span>" +
            "</button>"
   } else {
-    return "<button class='change-quality  down pull-right btn btn-default btn-xs' disabled>" +
+    return "<button class='change-quality down pull-right btn btn-default btn-xs' disabled>" +
            "<span class='glyphicon glyphicon-thumbs-up'></span>" +
            "</button>"
   }
